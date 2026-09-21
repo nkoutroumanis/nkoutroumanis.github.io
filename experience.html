@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VCKBC8YCT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-4VCKBC8YCT');
+  </script>
+  
+  <script>
+    // Default to dark; remembers the user's choice across pages via localStorage.
+    (function () {
+      var t = 'dark';
+      try { t = localStorage.getItem('theme') || 'dark'; } catch (e) {}
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nikolaos Koutroumanis — Experience</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <div id="site-nav"></div>
+  <h1 class="page-title">experience</h1>
+  <p class="page-sub">Appointments, education, and service.</p>
+
+  <h2 class="heading">appointments</h2>
+  <div class="entry">
+    <div class="when">2024 — present</div>
+    <div>
+      <h3>Postdoctoral Researcher</h3>
+      <p class="org">Lab / Group, University</p>
+      <ul>
+        <li>One line on your main project or responsibility.</li>
+        <li>A result, grant, or system you built.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 class="heading">education</h2>
+  <div class="entry">
+    <div class="when">2019 — 2024</div>
+    <div>
+      <h3>Ph.D. in Field</h3>
+      <p class="org">Department, University · Advisor: Prof. Name</p>
+      <ul><li>Dissertation: "Working Title of Your Thesis."</li></ul>
+    </div>
+  </div>
+  <div class="entry">
+    <div class="when">2017 — 2019</div>
+    <div>
+      <h3>M.Sc. in Field</h3>
+      <p class="org">Department, University</p>
+    </div>
+  </div>
+
+  <h2 class="heading">service</h2>
+  <div class="entry">
+    <div class="when">2021 — present</div>
+    <div>
+      <h3>Reviewer</h3>
+      <p class="org">Conference / Journal names</p>
+    </div>
+  </div>
+
+  <div id="site-footer"></div>
+</div>
+  <script src="layout.js"></script>
+</body>
+</html>

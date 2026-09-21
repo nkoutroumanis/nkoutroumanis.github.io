@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VCKBC8YCT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-4VCKBC8YCT');
+  </script>
+  
+  <script>
+    // Default to dark; remembers the user's choice across pages via localStorage.
+    (function () {
+      var t = 'dark';
+      try { t = localStorage.getItem('theme') || 'dark'; } catch (e) {}
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nikolaos Koutroumanis — Teaching</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <div id="site-nav"></div>
+  <h1 class="page-title">teaching</h1>
+  <p class="page-sub">A sentence on your teaching interests or philosophy, if you'd like one.</p>
+
+  <h2 class="heading">instructor</h2>
+  <div class="course">
+    <div class="code">DEPT 101 · Fall 2025</div>
+    <div>
+      <h3>Course Title</h3>
+      <p class="role">Instructor of record · ~120 students</p>
+    </div>
+  </div>
+
+  <h2 class="heading">teaching assistant</h2>
+  <div class="course">
+    <div class="code">DEPT 220 · Spring 2024</div>
+    <div>
+      <h3>Another Course Title</h3>
+      <p class="role">Head TA · led weekly sections and designed assignments</p>
+    </div>
+  </div>
+  <div class="course">
+    <div class="code">DEPT 110 · Fall 2023</div>
+    <div>
+      <h3>Intro Course Title</h3>
+      <p class="role">Teaching assistant · office hours and grading</p>
+    </div>
+  </div>
+
+  <h2 class="heading">mentoring</h2>
+  <div class="course">
+    <div class="code">2023 — present</div>
+    <div>
+      <h3>Undergraduate &amp; junior researchers</h3>
+      <p class="role">A short note on students you've mentored.</p>
+    </div>
+  </div>
+
+  <div id="site-footer"></div>
+</div>
+  <script src="layout.js"></script>
+</body>
+</html>

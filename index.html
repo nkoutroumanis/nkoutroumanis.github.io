@@ -1,9 +1,100 @@
-<!doctype html>
-<html>
-  <head>
-    <title>This is the title of the webpage!</title>
-  </head>
-  <body>
-    <p>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VCKBC8YCT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-4VCKBC8YCT');
+  </script>
+
+  <script>
+    // Default to dark; remembers the user's choice across pages via localStorage.
+    (function () {
+      var t = 'dark';
+      try { t = localStorage.getItem('theme') || 'dark'; } catch (e) {}
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nikolaos Koutroumanis</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <!-- NAV -->
+  <div id="site-nav"></div>
+
+  <!-- HERO -->
+  <div class="grid-x grid-margin-x hero">
+    <div class="cell medium-8 bio">
+      <h1>about</h1>
+      <p class="about-line"><a href="#">Archimedes AI Unit, Athena Research Center</a>, Athens, Greece. <a href="mailto:n.koutroumanis@athenarc.gr">n.koutroumanis [at] athenarc.gr</a>.</p>
+
+      <p>I am a Postdoctoral Researcher in Archimedes AI Unit of the Athena Research Center in Athens, Greece. 
+        My research interests lie in the area of Big spatial and spatio-temporal data management, including data indexing, parallel query processing, and distributed storage systems.</p>
+
+      <div class="socials">
+        <a href="mailto:you@university.edu" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/koutroumanis/" target="_blank" rel="noopener" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/nkoutroumanis" target="_blank" rel="noopener" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://scholar.google.com/citations?user=FjR_cp8AAAAJ&hl=el" target="_blank" rel="noopener" title="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a>
+      </div>
+    </div>
+
+    <div class="cell medium-4">
+      <!-- Name your photo prof_pic.jpg and drop it in this folder -->
+      <!-- <img class="profile-photo" src="https://placehold.co/480x480/f0f0f0/999999?text=prof_pic.jpg" alt="Portrait of Your Name"> -->
+      <img class="profile-photo" src="img/nikos.jpg" alt="Portrait of Your Name">
+
+      <div class="contact-block">
+        Office 555, Building<br>
+        123 University Street<br>
+        Your City, State 12345
+      </div>
+    </div>
+  </div>
+
+  <!-- NEWS -->
+  <h2 class="heading">news</h2>
+  <table class="news">
+    <tr><td class="date">December 2025</td><td>Paper accepted at VLDB venue. See you there!</td></tr>
+  </table>
+
+  <!-- SELECTED PUBLICATIONS -->
+  <h2 class="heading"><a href="publications.html">selected publications</a></h2>
+
+  <div class="pub">
+    <div class="preview">preview</div>
+    <div>
+      <p class="title-line">Scalable Grid-based Computation of Kendall's Tau Correlation</p>
+      <p class="authors"><span class="me">Nikolaos Koutroumanis</span>, Petros Karampas, Alexandros Karakasidis, Nikos Mamoulis, Panos Vassiliadis</p>
+      <p class="venue">VLDB <span class="year">2026</span></p>
+      <div class="badges"><a href="https://www.vldb.org/pvldb/vol19/p876-koutroumanis.pdf">PDF</a><a href="https://github.com/DAINTINESS-Group/KendallTauForBigData">Code</a></div>
+    </div>
+  </div>
+
+  <div class="pub">
+    <div class="preview">preview</div>
+    <div>
+      <p class="title-line">Parallel Spatial Join Processing with Adaptive Replication</p>
+      <p class="authors"><span class="me">Nikolaos Koutroumanis</span>, Christos Doulkeridis, Akrivi Vlachou</p>
+      <p class="venue">EDBT <span class="year">2025</span></p>
+      <div class="badges"><a href="https://openproceedings.org/2025/conf/edbt/paper-120.pdf">PDF</a><a href="https://github.com/nkoutroumanis/Parallel-Spatial-Joins">Code</a></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div id="site-footer"></div>
+</div>
+  <script src="layout.js"></script>
+</body>
 </html>

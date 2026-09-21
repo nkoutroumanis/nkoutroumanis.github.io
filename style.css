@@ -1,0 +1,199 @@
+/* ---- al-folio–inspired academic theme (over Foundation) ---- */
+
+/* Dark is the default theme (applied on :root / [data-theme="dark"]) */
+:root,
+[data-theme="dark"] {
+  --ink:        #e8e8e8;   /* light text on dark */
+  --paper:      #1c1d20;   /* near-black background */
+  --card:       #26272b;   /* raised surfaces */
+  --accent:     #e14bd6;   /* brighter magenta for dark bg */
+  --muted:      #9a9a9f;   /* grey secondary text */
+  --line:       #34353a;   /* hairline rule */
+  --hover-bg:   #2c2d31;
+}
+
+[data-theme="light"] {
+  --ink:        #212529;
+  --paper:      #ffffff;
+  --card:       #f5f5f5;
+  --accent:     #b509ac;
+  --muted:      #828282;
+  --line:       #e8e8e8;
+  --hover-bg:   #f5f5f5;
+}
+
+* { box-sizing: border-box; }
+
+html { color-scheme: dark; }
+[data-theme="light"] html { color-scheme: light; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.wrap { max-width: 920px; margin: 0 auto; padding: 0 1.25rem; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent); text-decoration: underline; }
+
+/* ---- Top nav: brand left, horizontal links, theme toggle ---- */
+.site-nav { padding: 1.5rem 0 0.4rem; }
+.site-nav .bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+.site-nav .brand {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.site-nav .brand:hover { color: var(--ink); text-decoration: none; }
+.site-nav .nav-right { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+.site-nav ul {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+.site-nav ul a {
+  color: var(--ink);
+  font-size: 1rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: 6px;
+  display: inline-block;
+}
+.site-nav ul a:hover { background: var(--hover-bg); text-decoration: none; }
+.site-nav ul a.active { color: var(--accent); font-weight: 500; }
+
+/* ---- Theme toggle button ---- */
+.theme-toggle {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  width: 2.3rem; height: 2.3rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  display: inline-flex; align-items: center; justify-content: center;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+.theme-toggle:hover { background: var(--hover-bg); border-color: var(--accent); color: var(--accent); }
+.theme-toggle .icon-light { display: none; }
+.theme-toggle .icon-dark  { display: inline; }
+[data-theme="light"] .theme-toggle .icon-light { display: inline; }
+[data-theme="light"] .theme-toggle .icon-dark  { display: none; }
+
+hr.nav-rule { border: 0; border-top: 1px solid var(--line); margin: 0.6rem 0 2.5rem; }
+
+/* ---- Page headings ---- */
+h1.page-title {
+  font-size: 2.75rem; font-weight: 400; letter-spacing: -0.02em; margin: 0 0 0.15rem;
+}
+.page-sub { color: var(--muted); font-size: 1.1rem; margin-bottom: 2.5rem; }
+
+h2.heading { font-size: 1.75rem; font-weight: 400; color: var(--ink); margin: 2.75rem 0 1.25rem; }
+h2.heading a { color: var(--ink); }
+
+/* ---- Home hero ---- */
+.hero { margin-bottom: 1rem; }
+.hero h1 { font-size: 2.75rem; font-weight: 400; margin: 0 0 0.5rem; letter-spacing: -0.02em; }
+.hero .about-line { color: var(--muted); font-size: 1.05rem; margin-bottom: 1.5rem; }
+.hero .about-line a { color: var(--accent); }
+
+/* .profile-photo {
+  width: 100%; max-width: 240px;
+  border-radius: 50%; aspect-ratio: 1 / 1; object-fit: cover;
+  display: block; margin: 0 auto 1rem;
+} */
+.profile-photo {
+  width: 100%; max-width: 240px;
+  border-radius: 50%; aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center 30%; /* nudge crop upward toward the face; tweak % as needed */
+  display: block; margin: 2.5rem auto 1rem; /* top spacing pushes photo further down */
+}
+
+.contact-block { text-align: center; color: var(--muted); font-size: 0.9rem; line-height: 1.5; }
+.bio p { margin-bottom: 1.1rem; }
+
+/* ---- Social icons ---- */
+.socials { margin: 1.5rem 0 0; display: flex; gap: 1.1rem; font-size: 1.35rem; }
+.socials a { color: var(--muted); }
+.socials a:hover { color: var(--accent); text-decoration: none; }
+
+/* ---- News table (override Foundation's default table skin) ---- */
+table.news {
+  width: 100%;
+  border-collapse: collapse;
+  background: transparent;
+  margin: 0;
+}
+table.news tbody,
+table.news tr { background: transparent; border: 0; }
+table.news td,
+table.news tbody td {
+  padding: 0.5rem 0.75rem 0.5rem 0;
+  vertical-align: top;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+}
+table.news td.date { color: var(--muted); white-space: nowrap; width: 8.5rem; font-size: 0.95rem; }
+
+/* ---- Publications ---- */
+.pub { display: grid; grid-template-columns: 5.5rem 1fr; gap: 1.25rem; padding: 1.1rem 0; }
+.pub .preview {
+  background: var(--card); border: 1px solid var(--line); border-radius: 6px;
+  aspect-ratio: 4 / 3; display: flex; align-items: center; justify-content: center;
+  color: var(--muted); font-size: 0.65rem; text-align: center; padding: 0.25rem;
+}
+.pub .title-line { font-weight: 500; color: var(--ink); margin-bottom: 0.15rem; }
+.pub .authors { color: var(--ink); font-size: 0.95rem; }
+.pub .authors .me { font-weight: 700; }
+.pub .venue { color: var(--muted); font-style: italic; font-size: 0.92rem; }
+.pub .venue .year { font-style: normal; }
+.pub .badges { margin-top: 0.45rem; display: flex; gap: 0.4rem; flex-wrap: wrap; }
+.pub .badges a {
+  font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.03em;
+  border: 1px solid var(--accent); color: var(--accent);
+  padding: 0.08rem 0.5rem; border-radius: 4px;
+}
+.pub .badges a:hover { background: var(--accent); color: var(--paper); text-decoration: none; }
+
+/* ---- Experience / CV entries ---- */
+.entry { display: grid; grid-template-columns: 9rem 1fr; gap: 1.25rem; padding: 1rem 0; border-bottom: 1px solid var(--line); }
+.entry .when { color: var(--muted); font-size: 0.95rem; padding-top: 0.15rem; }
+.entry h3 { font-size: 1.15rem; font-weight: 500; margin: 0 0 0.15rem; }
+.entry .org { color: var(--muted); font-style: italic; }
+.entry ul { margin: 0.5rem 0 0 1.1rem; }
+.entry ul li { margin-bottom: 0.25rem; }
+
+/* ---- Teaching ---- */
+.course { display: grid; grid-template-columns: 9rem 1fr; gap: 1.25rem; padding: 1rem 0; border-bottom: 1px solid var(--line); }
+.course .code { color: var(--muted); font-size: 0.95rem; padding-top: 0.15rem; }
+.course h3 { font-size: 1.15rem; font-weight: 500; margin: 0 0 0.1rem; }
+.course .role { color: var(--muted); font-size: 0.95rem; }
+
+/* ---- Footer ---- */
+.site-footer {
+  margin-top: 4rem; padding: 2rem 0; border-top: 1px solid var(--line);
+  color: var(--muted); font-size: 0.85rem; text-align: center;
+}
+
+@media screen and (max-width: 39.9375em) {
+  h1.page-title, .hero h1 { font-size: 2.1rem; }
+  .entry, .course { grid-template-columns: 1fr; gap: 0.2rem; }
+  .site-nav .bar { flex-direction: column; align-items: flex-start; }
+}

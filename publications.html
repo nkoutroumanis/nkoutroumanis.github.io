@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VCKBC8YCT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-4VCKBC8YCT');
+  </script>
+  
+  <script>
+    // Default to dark; remembers the user's choice across pages via localStorage.
+    (function () {
+      var t = 'dark';
+      try { t = localStorage.getItem('theme') || 'dark'; } catch (e) {}
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nikolaos Koutroumanis — Publications</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <div id="site-nav"></div>
+  <h1 class="page-title">publications</h1>
+  <p class="page-sub">* denotes equal contribution. Full list on <a href="#">Google Scholar</a>.</p>
+
+  <h2 class="heading">2025</h2>
+  <div class="pub">
+    <div class="preview">preview</div>
+    <div>
+      <p class="title-line">Title of the paper, stated exactly as published.</p>
+      <p class="authors"><span class="me">Your Name</span>, Coauthor A, Coauthor B</p>
+      <p class="venue">Venue / Conference, <span class="year">2025</span></p>
+      <div class="badges"><a href="#">PDF</a><a href="#">arXiv</a><a href="#">Code</a><a href="#">BibTeX</a></div>
+    </div>
+  </div>
+  <div class="pub">
+    <div class="preview">preview</div>
+    <div>
+      <p class="title-line">A second paper title.</p>
+      <p class="authors">Coauthor A, <span class="me">Your Name</span>, Coauthor C</p>
+      <p class="venue">Journal Name, <span class="year">2025</span></p>
+      <div class="badges"><a href="#">PDF</a><a href="#">DOI</a></div>
+    </div>
+  </div>
+
+  <h2 class="heading">2024</h2>
+  <div class="pub">
+    <div class="preview">preview</div>
+    <div>
+      <p class="title-line">An earlier paper title.</p>
+      <p class="authors"><span class="me">Your Name</span>, Coauthor D</p>
+      <p class="venue">Workshop / Venue, <span class="year">2024</span></p>
+      <div class="badges"><a href="#">PDF</a><a href="#">Slides</a></div>
+    </div>
+  </div>
+
+  <h2 class="heading">preprints</h2>
+  <div class="pub">
+    <div class="preview">preview</div>
+    <div>
+      <p class="title-line">Working title of a manuscript under review.</p>
+      <p class="authors"><span class="me">Your Name</span>, Coauthor E</p>
+      <p class="venue">Under review, <span class="year">2026</span></p>
+      <div class="badges"><a href="#">arXiv</a></div>
+    </div>
+  </div>
+
+  <div id="site-footer"></div>
+</div>
+  <script src="layout.js"></script>
+</body>
+</html>
